@@ -11,12 +11,14 @@ Azure Virtual Machines are available in a number of configurations that fit unde
 URL = `https://portal.azure.com`
 
 Cloud Shell:
+
 ![Cloud Shell](images/1_CloudShell.png?raw=true)
 
 <br>
 ![Cloud Shell](images/2_CloudShell.png?raw=true)
 
 <br>
+
 #### Step 2 - Select your subscription if more than one is available to you
 
 Firstly, list the Subscriptions available to your user:
@@ -38,6 +40,7 @@ For example, in the image below I am selecting my MSDN ('Visual Studio Enterpris
 ![Set Subscription](images/4_AccountSet.png?raw=true)
 
 <br>
+
 #### Step 3 - Inspect the VM sizes available in the North Europe and UK South Regions using Azure CLI
 
 Enter the following in the Cloud Shell:
@@ -46,19 +49,21 @@ Enter the following in the Cloud Shell:
 az vm list-sizes -l northeurope -o table
 ```
 
-![Set Subscription](images/5_ListVMSizesNorthEurope.png?raw=true)
+![List VM Sizes North Europe](images/5_ListVMSizesNorthEurope.png?raw=true)
 
 followed by:
 
 ```
-az vm show sizes -l uksouth -?
+az vm list-sizes -l uksouth -o table
 ```
 
-![Set Subscription](images/6_ListVMSizesUKSouth.png?raw=true)
+![List VM Sizes UK South](images/6_ListVMSizesUKSouth.png?raw=true)
 
-Compare the outputs and identify the differences.
 
-At the time of writing, the differences are:
+Compare the outputs and identify the differences in the outputs that you see.
+
+
+At the time of writing this guide, the differences were:
 
 | UK South |
 | ------------------------------------------- |
@@ -67,6 +72,7 @@ At the time of writing, the differences are:
 | + M Series (Memory Optimised) |
 
 <br>
+
 #### Step 4 - Inspect the VM sizes available in the North Europe and UK South Regions using PowerShell
 
 Switch the Cloud Shell to PowerShell mode:
@@ -88,6 +94,7 @@ followed by:
 You should see the same differences as when using the CLI.
 
 <br>
+
 #### Step 5 - Inspect the VM images available in all Regions using PowerShell
 
 Enter the following in the Cloud Shell:
@@ -131,6 +138,7 @@ Get-AzureRmVMImageSku -l northeurope -Publisher Canonical -Offer ? | Select Skus
 ```
 
 <br>
+
 #### Step 6 - Inspect the VM images available in all Regions using Azure CLI
 
 Switch the Cloud Shell to Bash mode:
