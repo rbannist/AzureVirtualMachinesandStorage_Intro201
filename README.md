@@ -15,6 +15,7 @@ Cloud Shell:
 ![Cloud Shell](images/1_CloudShell.png?raw=true)
 
 <br>
+
 ![Cloud Shell](images/2_CloudShell.png?raw=true)
 
 <br>
@@ -32,7 +33,7 @@ az account list
 Then select the appropriate subscription:
 
 ```
-az account set --subscription 'guid'
+az account set --subscription '[guid | name]'
 ```
 
 For example, in the image below I am selecting my MSDN ('Visual Studio Enterprise') subscription:
